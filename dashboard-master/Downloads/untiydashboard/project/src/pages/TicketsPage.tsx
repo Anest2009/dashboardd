@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'; // Add useState and useMemo here
+import React, { useState, useMemo } from 'react'; 
 import { Plus, Search, Filter } from 'lucide-react';
 import { TicketList } from '../components/TicketList';
 import { CreateTicketModal } from '../components/CreateTicketModal';
