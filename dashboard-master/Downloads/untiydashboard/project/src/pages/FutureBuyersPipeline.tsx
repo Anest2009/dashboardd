@@ -10,7 +10,7 @@ const FutureBuyersPipeline = () => {
     {
       email: 'giver@gmail.com',
       leadDate: '12/12/2024',
-      source: { name: 'Facebook' }, // Removed icon
+      source: { name: 'Facebook' },
       leadScore: '25%',
       priority: 'High',
       timeline: '2 Weeks',
@@ -23,7 +23,7 @@ const FutureBuyersPipeline = () => {
     {
       email: 'johndoe@gmail.com',
       leadDate: '10/7/2024',
-      source: { name: 'Instagram' }, // Removed icon
+      source: { name: 'Instagram' },
       leadScore: '67%',
       priority: 'Low',
       timeline: 'Not sure',
@@ -36,7 +36,7 @@ const FutureBuyersPipeline = () => {
     {
       email: 'janesmit@gmail.com',
       leadDate: '11/15/2024',
-      source: { name: 'LinkedIn' }, // Removed icon
+      source: { name: 'LinkedIn' }, 
       leadScore: '55%',
       priority: 'Medium',
       timeline: '3 Weeks',
@@ -49,7 +49,7 @@ const FutureBuyersPipeline = () => {
     {
       email: 'mikebrown@gmail.com',
       leadDate: '9/22/2024',
-      source: { name: 'Google Ads' }, // Removed icon
+      source: { name: 'Google Ads' }, 
       leadScore: '80%',
       priority: 'High',
       timeline: 'Not sure',
@@ -62,7 +62,7 @@ const FutureBuyersPipeline = () => {
     {
       email: 'sarahlee@gmail.com',
       leadDate: '10/30/2024',
-      source: { name: 'Twitter' }, // Removed icon
+      source: { name: 'Twitter' }, 
       leadScore: '40%',
       priority: 'Low',
       timeline: '4 Weeks',
@@ -75,7 +75,7 @@ const FutureBuyersPipeline = () => {
     {
       email: 'tomwilson@gmail.com',
       leadDate: '11/5/2024',
-      source: { name: 'Referral' }, // Removed icon
+      source: { name: 'Referral' }, 
       leadScore: '75%',
       priority: 'High',
       timeline: 'Not sure',
@@ -87,23 +87,23 @@ const FutureBuyersPipeline = () => {
     }
   ];
 
-  // Handle search input change
+  
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
   };
 
-  // Filter the table data based on the search query
+  
   const filteredData = tableData.filter(row =>
     row.email.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Function to open the modal with the full message
+  
   const openModal = (fullMessage: string) => {
     setSelectedMessage(fullMessage);
     setIsModalOpen(true);
   };
 
-  // Function to close the modal
+
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedMessage(null);
@@ -182,8 +182,8 @@ const FutureBuyersPipeline = () => {
                   <span
                     className="py-1 px-2 rounded-full text-xs"
                     style={{
-                      backgroundColor: '#302011', // Dark background
-                      color: '#EBCA50', // Bright yellow text
+                      backgroundColor: '#302011', 
+                      color: '#EBCA50', 
                     }}
                   >
                     {row.timeline}
