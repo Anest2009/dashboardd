@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 // Removed FontAwesome imports
 
 const FutureBuyersPipeline = () => {
-  const [searchQuery, setSearchQuery] = useState(''); // State for search query
-  const [selectedMessage, setSelectedMessage] = useState<string | null>(null); // State for the selected message
-  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+  const [searchQuery, setSearchQuery] = useState(''); 
+  const [selectedMessage, setSelectedMessage] = useState<string | null>(null); 
+  const [isModalOpen, setIsModalOpen] = useState(false); 
 
   const tableData = [
     {
