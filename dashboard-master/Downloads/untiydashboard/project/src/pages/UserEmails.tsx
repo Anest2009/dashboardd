@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-// Types
+
 interface User {
   email: string;
   ticketTranscripts: string;
@@ -15,7 +15,7 @@ interface User {
   pfpUrl: string;
 }
 
-// Expanded mock data
+
 const mockUsers: User[] = [
   {
     email: 'sarah.parker@gmail.com',
@@ -97,7 +97,7 @@ const mockUsers: User[] = [
   },
 ];
 
-// User Table Component
+
 const UserTable = ({ users }: { users: User[] }) => {
   return (
     <div className="w-full p-8 bg-gray-900 text-white rounded-lg shadow-lg">
@@ -152,11 +152,11 @@ const UserTable = ({ users }: { users: User[] }) => {
   );
 };
 
-// UserEmails Component with Search
-const UserEmails = () => {
-  const [searchQuery, setSearchQuery] = useState(''); // Step 1: State for search query
 
-  // Step 2: Handle search input change
+const UserEmails = () => {
+  const [searchQuery, setSearchQuery] = useState(''); 
+
+  
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
   };
