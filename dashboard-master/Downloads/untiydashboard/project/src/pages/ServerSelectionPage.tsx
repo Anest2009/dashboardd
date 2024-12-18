@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom';
 interface Server {
   id: string;
   name: string;
-  icon: string | null; // URL or null if no icon
+  icon: string | null; 
 }
 
-// Mock data for servers with unique images
+
 const mockServers: Server[] = [
   {
     id: '1',
@@ -52,7 +52,7 @@ const mockServers: Server[] = [
 ];
 
 export function ServerSelectionPage() {
-  const [servers] = useState<Server[]>(mockServers); // Use mock data
+  const [servers] = useState<Server[]>(mockServers); 
   const [selectedServer, setSelectedServer] = useState<string | null>(null);
   const navigate = useNavigate();
 
@@ -62,12 +62,12 @@ export function ServerSelectionPage() {
 
   const handleContinue = () => {
     if (selectedServer) {
-      navigate(`/next-page/${selectedServer}`); // Adjust the route as needed
+      navigate(`/next-page/${selectedServer}`); 
     }
   };
 
   const handleManageServer = (serverId: string) => {
-    // Navigate to the dashboard instead of the server management page
+    
     navigate(`/dashboard`);
   };
 
@@ -76,7 +76,7 @@ export function ServerSelectionPage() {
       <h1 className="text-4xl font-extrabold text-white mb-6 text-center">Select Your Discord Server</h1>
       <p className="text-lg text-gray-300 mb-8 text-center">Choose a server from the list below:</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {/* Responsive grid layout */}
-        {servers.length === 0 ? ( // Check if servers are loaded
+        {servers.length === 0 ? ( 
           <p className="text-gray-300">No servers found.</p>
         ) : (
           servers.map((server) => (
@@ -86,14 +86,14 @@ export function ServerSelectionPage() {
               onClick={() => handleSelectServer(server.id)}
             >
               <img
-                src={server.icon || 'https://picsum.photos/200/200'} // Use the server icon or a placeholder
+                src={server.icon || 'https://picsum.photos/200/200'}
                 alt={`${server.name} icon`}
-                className="w-16 h-16 rounded-full mb-2 object-cover" // Image styling
+                className="w-16 h-16 rounded-full mb-2 object-cover" 
               />
               <span className="text-lg font-semibold">{server.name}</span> {/* Increased font size for better readability */}
               <button
                 onClick={() => handleManageServer(server.id)}
-                className="mt-2 bg-orange-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-orange-600 transition-colors" // Orange button style
+                className="mt-2 bg-orange-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-orange-600 transition-colors" 
               >
                 Manage Server
               </button>
