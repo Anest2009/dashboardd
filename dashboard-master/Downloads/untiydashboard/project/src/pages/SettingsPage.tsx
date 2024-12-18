@@ -1,4 +1,4 @@
-// import React from 'react';
+
 import { Bot, User, Bell, Shield } from 'lucide-react';
 import { useSettings } from '../hooks/useSettings';
 
