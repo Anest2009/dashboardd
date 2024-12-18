@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Outlet } from 'react-router-dom'; // Ensure Outlet is imported
+import { Outlet } from 'react-router-dom'; 
 import { Bot, BarChart2, Ticket, Settings, Menu, X, Sun, Moon, Mail, Users } from 'lucide-react';
 import { NavLink } from './NavLink';
 import {Sidebar } from './Sidebar';
